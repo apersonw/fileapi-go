@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-// 与服务端 pkg/uploadtoken、Java / Node.js / Python SDK 共用的测试向量
+// 与服务端 pkg/uploadtoken、Java / Python SDK 共用的测试向量
 func TestUploadTokenVector(t *testing.T) {
 	payload := "eyJjbGllbnRfaWQiOiJmYV90ZXN0Iiwibm9uY2UiOiIwMTIzNDU2Nzg5YWJjZGVmIiwiZXhwaXJlc19hdCI6MTcwMDAwMDAwMCwibWF4X3NpemUiOjEwNDg1NzYsImNvbnRlbnRfdHlwZXMiOlsiaW1hZ2UvKiJdfQ"
 	if got := signUploadToken("s3cr3t", payload); got != "KyOrpNCjE0WLGzetVTEapAUQt944wsNyKAU-PH2kefw" {
